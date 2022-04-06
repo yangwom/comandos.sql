@@ -1,0 +1,15 @@
+Juntando duas ou mais colunas usando o CONCAT
+
+Dê uma pesquisada agora na tabela sakila.actor usando o comando SELECT * FROM sakila.actor e veja que temos uma coluna first_name e outra chamada last_name . Vamos imaginar que é necessário criar um relatório com o nome completo de um ator. Como podemos fazer isso? É fácil, basta usar a função CONCAT .
+Para compreender seu uso, execute os exemplos a seguir no MySQL Workbench :
+
+SELECT CONCAT(first_name, last_name) FROM sakila.actor;
+
+-- Seu resultado ficou estranho? Eu também achei! Tente agora a query a seguir.
+
+SELECT CONCAT(first_name, ' ', last_name) FROM sakila.actor;
+
+-- Muito melhor, certo? Mas dá para melhorar? Dá!
+
+SELECT CONCAT(first_name, ' ', last_name) AS 'Nome Completo' FROM sakila.actor;
+
